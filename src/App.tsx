@@ -1,11 +1,13 @@
-import Header from "./assets/components/Header/Header"
-import Hero from "./assets/components/Hero/Hero"
+import About from "./components/About/About"
+import Header from "./components/Header/Header"
+import Hero from "./components/Hero/Hero"
 
 function App() {
   return (
     <main>
       <Header/>
       <Hero/>
+      <About/>
     </main>
   )
 }
