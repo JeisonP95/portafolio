@@ -75,7 +75,7 @@ const About = () => {
               <motion.div className={styles.introduction} variants={itemVariants}>
                 <h3 className={styles.subtitle}>¡Hola! Soy Yeison</h3>
                 <p className={styles.description}>
-                  Soy estudiante de <strong>Ingeniería de Sistemas</strong> (6.º semestre), apasionado por el desarrollo
+                  Soy estudiante de <strong>Ingeniería de Sistemas</strong>, apasionado por el desarrollo
                   web. Tengo experiencia con <strong>React</strong>, <strong>Node.js</strong>, <strong>Express</strong>{" "}
                   y <strong>MongoDB</strong>. He trabajado en proyectos de invitaciones digitales, sistemas de rutas
                   logísticas y bases de datos relacionales con <strong>MySQL</strong>.

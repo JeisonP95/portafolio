@@ -1,0 +1,314 @@
+.projects {
+    padding: var(--spacing-2xl) 0;
+    background-color: var(--color-bg-primary);
+    position: relative;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+  }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    margin-bottom: var(--spacing-2xl);
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-md);
+    position: relative;
+  }
+  
+  .title::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    border-radius: 2px;
+  }
+  
+  .subtitle {
+    font-size: 1.125rem;
+    color: var(--color-text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  /* Projects Grid */
+  .projectsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-2xl);
+  }
+  
+  /* Project Card */
+  .projectCard {
+    background: var(--color-bg-primary);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--color-border);
+    transition: all var(--transition-normal);
+    position: relative;
+  }
+  
+  .projectCard:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+  }
+  
+  .cardHeader {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .imageContainer {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+  }
+  
+  .projectImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+  }
+  
+  .projectCard:hover .projectImage {
+    transform: scale(1.1);
+  }
+  
+  .imageOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.8), rgba(139, 92, 246, 0.8));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: var(--spacing-md);
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+  }
+  
+  .projectCard:hover .imageOverlay {
+    opacity: 1;
+  }
+  
+  .projectCategory {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    color: white;
+    font-weight: 600;
+    font-size: 0.875rem;
+  }
+  
+  .projectIcon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .projectStatus {
+    align-self: flex-end;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-md);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 500;
+  }
+  
+  /* Card Content */
+  .cardContent {
+    padding: var(--spacing-xl);
+  }
+  
+  .projectTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .projectDescription {
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
+    font-size: 0.95rem;
+  }
+  
+  /* Technologies */
+  .technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .techTag {
+    background: var(--color-bg-accent);
+    color: var(--color-primary);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    font-weight: 500;
+    border: 1px solid var(--color-border);
+    transition: all var(--transition-fast);
+  }
+  
+  .techTag:hover {
+    background: var(--color-primary);
+    color: white;
+    transform: translateY(-2px);
+  }
+  
+  /* Project Links */
+  .projectLinks {
+    display: flex;
+    gap: var(--spacing-sm);
+  }
+  
+  .projectLink {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-md);
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: all var(--transition-normal);
+    border: 2px solid transparent;
+  }
+  
+  .demoLink {
+    background: var(--color-primary);
+    color: white;
+  }
+  
+  .demoLink:hover {
+    background: var(--color-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+  
+  .githubLink {
+    background: transparent;
+    color: var(--color-text-primary);
+    border-color: var(--color-border);
+  }
+  
+  .githubLink:hover {
+    background: var(--color-text-primary);
+    color: white;
+    border-color: var(--color-text-primary);
+  }
+  
+  /* More Projects Section */
+  .moreProjects {
+    text-align: center;
+    padding: var(--spacing-xl);
+    background: var(--color-bg-secondary);
+    border-radius: var(--radius-xl);
+    border: 2px dashed var(--color-border);
+  }
+  
+  .moreText {
+    font-size: 1.125rem;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .githubButton {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md) var(--spacing-xl);
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      padding: 0 var(--spacing-sm);
+    }
+  
+    .title {
+      font-size: 2rem;
+    }
+  
+    .subtitle {
+      font-size: 1rem;
+    }
+  
+    .projectsGrid {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-lg);
+    }
+  
+    .cardContent {
+      padding: var(--spacing-md);
+    }
+  
+    .projectTitle {
+      font-size: 1.25rem;
+    }
+  
+    .projectDescription {
+      font-size: 0.875rem;
+    }
+  
+    .projectLinks {
+      flex-direction: column;
+    }
+  
+    .projectLink {
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .title {
+      font-size: 1.75rem;
+    }
+  
+    .imageContainer {
+      height: 200px;
+    }
+  
+    .technologies {
+      gap: 4px;
+    }
+  
+    .techTag {
+      font-size: 0.7rem;
+      padding: 4px 8px;
+    }
+  
+    .moreProjects {
+      padding: var(--spacing-md);
+    }
+  
+    .githubButton {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+  
