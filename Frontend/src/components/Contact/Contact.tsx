@@ -51,11 +51,16 @@ const Contact = () => {
     setFormStatus("loading")
 
     try {
-      // Simulate API call - replace with actual endpoint
-      console.log("Sending form data to /api/contact:", formData)
+      //API call - actual endpoint
+      const response = await fetch("http://localhost:4000/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
 
-      // Simulate network delay
-      await new Promise((resolve) => setTimeout(resolve, 2000))
+      //network delay
+      if (!response.ok) throw new Error("Error en el servidor");
+      await response.json();
 
       // For now, just log the data and show success
       setFormStatus("success")
