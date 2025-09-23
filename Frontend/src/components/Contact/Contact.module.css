@@ -361,9 +361,8 @@
     }
   
     .contactDetail {
-      flex-direction: column;
       align-items: flex-start;
-      text-align: center;
+      text-align:justify;
     }
   
     .socialLink {

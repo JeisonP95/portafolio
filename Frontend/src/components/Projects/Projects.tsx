@@ -2,7 +2,9 @@ import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef } from "react"
 import { ExternalLink, Github, Code, Database, Route } from "lucide-react"
-import image1 from "../../assets/image.png"
+import image1 from "../../assets/Invit_Digit.png"
+import image2 from "../../assets/Sist_de Rut_Logíst.png"
+import image3 from "../../assets/sist_arr_comp.png"
 import styles from "./Projects.module.css"
 
 const Projects = () => {
@@ -50,7 +52,7 @@ const Projects = () => {
       title: "Sistema de Rutas Logísticas",
       description:
         "Aplicación para optimización de rutas de entrega utilizando el algoritmo A*. Incluye visualización interactiva de mapas y cálculo de distancias óptimas.",
-      image: "/logistics-route-optimization-map-interface-with-pa.jpg",
+      image: image2,
       technologies: ["React", "JavaScript", "A* Algorithm", "Leaflet", "CSS"],
       category: "Frontend",
       icon: <Route className={styles.projectIcon} />,
@@ -60,15 +62,15 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: "Sistema de Inventario",
+      title: "Sistema arreglo de computadores",
       description:
         "Base de datos relacional para gestión de inventario académico. Incluye modelado de datos, consultas complejas y reportes automatizados con MySQL.",
-      image: "/inventory-management-database-dashboard-with-chart.jpg",
+      image: image3,
       technologies: ["MySQL", "SQL", "Database Design", "ER Modeling"],
       category: "Database",
       icon: <Database className={styles.projectIcon} />,
       demoUrl: "#",
-      githubUrl: "https://github.com/yeisonpencue/inventario-mysql",
+      githubUrl: "https://github.com/JeisonP95/Sistema_Arreglo_Compu.git",
       status: "Académico",
     },
   ]

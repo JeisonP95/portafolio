@@ -253,6 +253,7 @@
     line-height: 1.6;
     margin-bottom: var(--spacing-lg);
     opacity: 0.95;
+    color: aliceblue;
   }
   
   .nextSkills {
