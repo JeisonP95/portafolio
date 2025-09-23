@@ -52,11 +52,16 @@ const Contact = () => {
 
     try {
       //API call - actual endpoint
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/contact`, {
+      const API_BASE = window.location.hostname.includes("localhost")
+        ? "http://localhost:4000"
+        : "https://portafolio-2n9l.onrender.com";
+
+      const response = await fetch(`${API_BASE}/api/contact`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
+
 
       //network delay
       if (!response.ok) throw new Error("Error en el servidor");
